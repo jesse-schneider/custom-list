@@ -90,7 +90,6 @@ void list::insert(int number)
         std::cout << "list is full! cannot perform insert" << std::endl;
 
     }
-    std::cout << "index: " << getIndex() << std::endl;
 
     if(getSorted() == false)
     {
@@ -148,8 +147,18 @@ void list::sort()
 }
 
 
-void unsort();
-
+void list::unsort()
+{
+    int temp;
+    for(int i = 0; i < getIndex()+1; i++)
+    {
+        int newInd = rand() % getIndex()+ + 1;
+        temp = arr[i];
+        arr[i] = arr[newInd];
+        arr[newInd] = temp;
+    }
+    std::cout << "list unsorted!" << std::endl;
+}
 
 int list::search(int number)
 {
