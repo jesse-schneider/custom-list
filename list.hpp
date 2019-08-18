@@ -8,17 +8,22 @@ class list {
         list & operator = (list && that) noexcept;
         ~list();
         int getSize();
+        void setSize(int size);
+        bool getSorted();
+        void setSorted(bool sorted);
+        int getIndex();
+        void setIndex(int index);
         void extend();
         void shrink();
         void insert(int number);
-        void remove();
+        bool remove(int number);
         void sort();
         void unsort();
-        void search();
+        int search(int number);
         void display();
         
     private:
-        int size; 
+        int size;
         int *arr = new int[size];
         bool sorted;
         int index;

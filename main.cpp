@@ -6,22 +6,23 @@
 
 main(int argc, char * argv[])
 {
+    list l;
 
-list l;
-list p(10);
-
-std::cout << l.getSize() << std::endl;
-std::cout << p.getSize() << std::endl;
-
-l.insert(7);
-l.insert(9);
-l.insert(8);
-l.insert(11);
-l.insert(12);
-l.display();
-l.shrink();
-l.extend();
-l.shrink();
-l.display();
+    l.insert(7);
+    l.insert(9);
+    l.insert(8);
+    l.insert(11);
+    l.insert(1);
+    l.insert(12);
+    l.insert(198);
+    l.display();
+    l.extend();
+    l.display();
+    l.shrink();
+    l.display();
+    l.sort();
+    l.insert(19);
+    l.remove(12);
+    l.display();
 
 }
