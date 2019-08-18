@@ -88,7 +88,7 @@ void list::insert(int number)
     if(getIndex() >= size)
     {
         std::cout << "list is full! cannot perform insert" << std::endl;
-
+        return;
     }
 
     if(getSorted() == false)
@@ -150,9 +150,10 @@ void list::sort()
 void list::unsort()
 {
     int temp;
+    setSorted(false);
     for(int i = 0; i < getIndex()+1; i++)
     {
-        int newInd = rand() % getIndex()+ + 1;
+        int newInd = rand() % getIndex() + 1;
         temp = arr[i];
         arr[i] = arr[newInd];
         arr[newInd] = temp;

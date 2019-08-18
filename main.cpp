@@ -51,7 +51,7 @@ main(int argc, char * argv[])
         case 5:
             std::cout << "enter the integer to search for: " << std::endl;
             std::cin >> input;
-            l.search(input);
+            std::cout << input << " is located at index " << l.search(input) << std::endl;
             break;
         case 6:
             l.sort();
