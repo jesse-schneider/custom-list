@@ -2,8 +2,6 @@
 #include <cstdlib>
 #include <iostream>
 
-//using namespace std;
-
 main(int argc, char * argv[])
 {
     int length, choice, input;
@@ -16,7 +14,6 @@ main(int argc, char * argv[])
   
     list l(length);
     
-
     while(1)
     {
     std::cout << "Select the options you would like to perfom:" << std::endl;
