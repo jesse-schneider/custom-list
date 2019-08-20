@@ -11,7 +11,8 @@ list::list() : size{8}, arr{new int[size]}, sorted{false}, index{0} { }
 list::list(int pSize) : size{pSize}, arr{new int[pSize]}, sorted{false}, index{0} { }
 
 //copy ctor
-list::list(list const & that) : size{that.size}, arr{new int [size]{}} { }
+list::list(list const & that) : size{that.size}, arr{new int [size]{}} 
+{ for(int i = 0; i < size; i++) { arr[i] = that.arr[i]; }}
 
 //move ctor
 list::list(list && that) noexcept : size{std::move(that.size)}, arr{std::move(that.arr)}
